@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>D:/#Java/2048/src</OriginalElement>
+  <nodes>
+    <node x="114.5" y="237.63251525423726">Game</node>
+    <node x="5.5" y="-325.7309288135593">Menu</node>
+    <node x="-121.5" y="36.450793220338994">paihang</node>
+    <node x="-160.0" y="646.8142372881355">Tile</node>
+    <node x="29.0" y="-484.4062915254237">Main</node>
+    <node x="-126.0" y="375.63251525423726">SQL</node>
+    <node x="108.5" y="36.450793220338994">Start</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Menu" target="paihang" relationship="CREATE">
+      <point x="0.0" y="119.5" />
+      <point x="108.5" y="-17.445342372881328" />
+      <point x="-35.5" y="-17.445342372881328" />
+      <point x="0.0" y="-108.0" />
+    </edge>
+    <edge source="Game" target="Tile" relationship="TO_MANY">
+      <point x="-101.21664337347215" y="154.08614593084712" />
+      <point x="47.147538989608684" y="707.2186611850843" />
+      <point x="47.147538989608684" y="705.7125026787589" />
+      <point x="54.10395547929505" y="705.7125026787589" />
+      <point x="106.60395547929505" y="-53.907866511317025" />
+    </edge>
+    <edge source="Start" target="Game" relationship="CREATE">
+      <point x="58.5070637933041" y="33.81800058012169" />
+      <point x="292.5070637933041" y="100.50495457627122" />
+      <point x="234.98255846865015" y="100.50495457627122" />
+      <point x="-2.0174415313498457" y="-306.2392316540274" />
+    </edge>
+    <edge source="Main" target="Menu" relationship="CREATE">
+      <point x="0.0" y="39.0" />
+      <point x="0.0" y="-119.5" />
+    </edge>
+    <edge source="paihang" target="SQL" relationship="CREATE">
+      <point x="-5.0" y="108.0" />
+      <point x="-40.5" y="306.7106227415205" />
+      <point x="-10.8342518611489" y="306.7106227415205" />
+      <point x="-10.8342518611489" y="405.30148375846966" />
+      <point x="-40.5" y="405.30148375846966" />
+      <point x="-5.0" y="0.0" />
+    </edge>
+    <edge source="Game" target="SQL" relationship="CREATE">
+      <point x="-104.32325557872778" y="-139.51639508766436" />
+      <point x="40.272836664411244" y="413.61612016657284" />
+      <point x="40.272836664411244" y="418.4399839457624" />
+      <point x="55.0" y="418.4399839457624" />
+      <point x="90.5" y="70.0" />
+    </edge>
+    <edge source="Menu" target="Start" relationship="CREATE">
+      <point x="0.0" y="119.5" />
+      <point x="108.5" y="-17.445342372881328" />
+      <point x="234.0" y="-17.445342372881328" />
+      <point x="0.0" y="-39.0" />
+    </edge>
+    <edge source="paihang" target="SQL" relationship="TO_ONE">
+      <point x="5.0" y="108.0" />
+      <point x="5.0" y="-74.0" />
+    </edge>
+    <edge source="Game" target="SQL" relationship="TO_ONE">
+      <point x="-122.5" y="-175.42400198870064" />
+      <point x="114.5" y="449.63251525423726" />
+      <point x="90.5" y="0.0" />
+    </edge>
+    <edge source="Game" target="Tile" relationship="CREATE">
+      <point x="-122.5" y="44.476227796610374" />
+      <point x="114.5" y="758.8142372881355" />
+      <point x="107.5" y="15.0" />
+    </edge>
+  </edges>
+  <settings layout="串并联" zoom="6.154573465760907" showDependencies="true" x="-2.385250433302417" y="355.5273455736086" />
+  <SelectedNodes />
+  <Categories>
+    <Category>内部类</Category>
+    <Category>字段</Category>
+    <Category>方法</Category>
+    <Category>构造函数</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

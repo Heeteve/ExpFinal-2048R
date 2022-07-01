@@ -1,0 +1,73 @@
+@startuml
+participant repaint
+create Game
+repaint -> Game : new
+activate Game
+Game -> SQL : connect 连接到数据库
+activate SQL
+SQL --> Game
+deactivate SQL
+Game -> Anonymous : mousePressed 监听鼠标单击
+activate Anonymous
+Anonymous -> Game : initGame 初始化游戏
+activate Game
+Game -> Game : addRandomTile 添加初始数字
+activate Game
+create Tile
+Game -> Tile : new
+activate Tile
+Tile --> Game
+deactivate Tile
+Game --> Game
+deactivate Game
+Game -> Game : addRandomTile 添加第二个初始数字
+activate Game
+create Tile
+Game -> Tile : new
+activate Tile
+Tile --> Game
+deactivate Tile
+Game --> Game
+deactivate Game
+Game --> Anonymous
+deactivate Game
+Anonymous -> Anonymous : keyPressed 监听键盘
+activate Anonymous
+Anonymous -> Game : moveUp 以方向上键为例
+activate Game
+Game -> Game : move
+activate Game
+Game -> Tile : canMergeWith 判断是否可合成
+activate Tile
+Tile --> Game
+deactivate Tile
+Game -> Tile : mergeWith 与之合成
+activate Tile
+Tile --> Game
+deactivate Tile
+Game -> Game : clearMerged 清除方块的已合并属性
+activate Game
+Game --> Game
+deactivate Game
+Game -> Game : addRandomTile 添加新的数字
+activate Game
+Game --> Game
+deactivate Game
+Game -> Game : movesAvailable 是否还有空格可移动
+activate Game
+Game --> Game
+deactivate Game
+Game -> SQL : send 不可移动则将分数发送到数据库
+activate SQL
+SQL --> Game
+deactivate SQL
+Game --> Game
+deactivate Game
+Game --> Anonymous
+deactivate Game
+Anonymous --> Anonymous
+deactivate Anonymous
+Anonymous --> Game
+deactivate Anonymous
+return
+@enduml

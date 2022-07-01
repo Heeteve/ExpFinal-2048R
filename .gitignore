@@ -1,0 +1,9 @@
+*.class
+*.log
+*.zip
+*.tar.gz
+*.rar
+*.iml
+.idea/
+.vscode/
+
